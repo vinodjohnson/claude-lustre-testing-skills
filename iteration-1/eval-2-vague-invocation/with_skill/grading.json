@@ -1,9 +1,0 @@
-{
-  "eval_id": 2,
-  "config": "with_skill",
-  "expectations": [
-    {"text": "asks_questions", "passed": true, "evidence": "Asked 2 questions: 'What operation are you testing?' and 'Are you focused on correctness or performance?'"},
-    {"text": "does_not_collect", "passed": true, "evidence": "No collector script was run. No topology data was presented. Response is purely conversational."},
-    {"text": "focused_questions", "passed": true, "evidence": "Exactly 2 focused questions, each with helpful examples in parentheses. No overwhelming list of options."}
-  ]
-}

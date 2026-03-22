@@ -1,9 +1,0 @@
-{
-  "eval_id": 2,
-  "config": "without_skill",
-  "expectations": [
-    {"text": "asks_questions", "passed": false, "evidence": "Did not ask questions. Immediately dumped static topology info."},
-    {"text": "does_not_collect", "passed": false, "evidence": "Attempted to run collector (denied), then dumped Vagrantfile analysis."},
-    {"text": "focused_questions", "passed": false, "evidence": "No questions asked at all."}
-  ]
-}
