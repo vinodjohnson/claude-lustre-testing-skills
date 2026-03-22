@@ -1,0 +1,12 @@
+{
+  "eval_id": 3,
+  "eval_name": "metadata-create-throughput",
+  "prompt": "I'm testing metadata create throughput on a multi-MDT setup",
+  "assertions": [
+    {"name": "collects_mds_params", "description": "Gets MDT count, MDS thread pools, and DNE config (striped dirs, remote rename)"},
+    {"name": "collects_mdc_tuning", "description": "Gets client-side MDC tuning params (max_mod_rpcs_in_flight)"},
+    {"name": "mentions_ldlm", "description": "Includes LDLM contention settings"},
+    {"name": "uses_tables", "description": "Presents data in structured tables or lists, not raw JSON dump"},
+    {"name": "offers_followup", "description": "Asks if the user wants more detail or data from a different subsystem"}
+  ]
+}

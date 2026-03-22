@@ -1,0 +1,11 @@
+{
+  "eval_id": 1,
+  "config": "without_skill",
+  "expectations": [
+    {"text": "skips_interview", "passed": true, "evidence": "Went straight to analyzing the environment without asking questions"},
+    {"text": "collects_from_mds", "passed": false, "evidence": "Could not run collector script. Analyzed static files instead (Vagrantfile, setup scripts)."},
+    {"text": "mentions_max_requests", "passed": true, "evidence": "Mentions 'Verify its current value by running lctl get_param mdt.*.hsm.max_requests on the MDS. For 4 concurrent copytools, you may need to increase this.'"},
+    {"text": "uses_tables", "passed": true, "evidence": "Used a cluster overview table with VM/hostname/IP/role/vCPUs/RAM"},
+    {"text": "mentions_concurrency", "passed": true, "evidence": "Identified single OST bottleneck, OSS resource constraints, and shared network link for 4 copytools"}
+  ]
+}

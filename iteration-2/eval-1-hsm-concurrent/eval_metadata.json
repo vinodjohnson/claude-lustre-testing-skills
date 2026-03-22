@@ -1,0 +1,13 @@
+{
+  "eval_id": 1,
+  "eval_name": "hsm-concurrent-copytools",
+  "prompt": "I want to test HSM archive with 4 concurrent copytools writing large files",
+  "assertions": [
+    {"name": "skips_interview", "description": "Does not ask clarifying questions — goes straight to collection"},
+    {"name": "collects_from_mds", "description": "Runs collector with filter that includes MDS node"},
+    {"name": "mentions_max_requests", "description": "Surfaces HSM max_requests and relates it to the 4 concurrent copytools"},
+    {"name": "uses_tables", "description": "Presents data in structured tables, not prose"},
+    {"name": "mentions_concurrency", "description": "Addresses concurrency capacity"},
+    {"name": "layer1_only", "description": "Presents only 2-4 critical facts, not a full parameter dump"}
+  ]
+}

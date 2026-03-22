@@ -1,0 +1,11 @@
+{
+  "eval_id": 3,
+  "config": "without_skill",
+  "expectations": [
+    {"text": "collects_mds_params", "passed": false, "evidence": "Identified single-MDT setup and MDT size but did not collect MDS thread pools, DNE config values, or live parameters."},
+    {"text": "collects_mdc_tuning", "passed": false, "evidence": "Mentioned mdc_max_mod_rpcs_in_flight in passing at the end but did not present it as structured data."},
+    {"text": "mentions_ldlm", "passed": false, "evidence": "No mention of LDLM contention settings."},
+    {"text": "uses_tables", "passed": true, "evidence": "Used a cluster overview table."},
+    {"text": "offers_followup", "passed": false, "evidence": "No follow-up questions. Ended with instructions to run the collector script manually."}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "skill_name": "get-available-topology",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I want to test HSM archive with 4 concurrent copytools writing large files",
+      "expected_output": "Should skip interview, collect HSM + concurrency params from mds and client VMs, present results in a table organized around HSM readiness and concurrency capacity, mention max_requests relative to the 4 copytools requested",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "",
+      "expected_output": "Should NOT collect anything yet. Should ask 1-2 focused questions about what test the user is planning before proceeding to collection",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I'm testing metadata create throughput on a multi-MDT setup",
+      "expected_output": "Should collect MDT count, MDS thread pools, MDC tuning, DNE config (striped dirs, remote rename), LDLM contention settings. Should present organized around metadata throughput. Should ask follow-up about whether user needs more detail",
+      "files": []
+    }
+  ]
+}

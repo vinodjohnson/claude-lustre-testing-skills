@@ -1,0 +1,12 @@
+{
+  "eval_id": 1,
+  "config": "with_skill",
+  "expectations": [
+    {"text": "skips_interview", "passed": true, "evidence": "Immediately identifies test intent as 'HSM archive with 4 concurrent copytools writing large files' and moves to collection."},
+    {"text": "collects_from_mds", "passed": false, "evidence": "Attempted python3 scripts/collect_lustre_topology.py mds,client but bash was denied. Correctly stopped rather than substituting static analysis."},
+    {"text": "mentions_max_requests", "passed": true, "evidence": "Preview table: 'max_requests — If < 4, some of your 4 copytools will queue rather than run concurrently'"},
+    {"text": "uses_tables", "passed": true, "evidence": "Single focused table with 4 rows (hsm_control, max_requests, MDT count, client mount) — proper Layer 1 approach"},
+    {"text": "mentions_concurrency", "passed": true, "evidence": "Opening identifies 'HSM concurrency test' and table addresses concurrent copytool capacity"},
+    {"text": "layer1_only", "passed": true, "evidence": "Only 4 critical facts in the preview table, not a full dump of all parameters. Significant improvement over iteration 1."}
+  ]
+}
