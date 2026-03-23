@@ -11,6 +11,10 @@ Iterative conversation to collect Lustre topology for test planning. Part of a w
 $ARGUMENTS
 ```
 
+## Background
+
+Read `.claude/commands/lustre_background.md` for Lustre filesystem background knowledge before proceeding. If the file is not found, proceed without it.
+
 ## Workflow
 
 ```

@@ -29,7 +29,8 @@ topology collector script they depend on.
 Then commit the installed files:
 
 ```bash
-git add .claude/commands/topology.md \
+git add .claude/commands/lustre_background.md \
+        .claude/commands/topology.md \
         .claude/commands/plan_lustre_test.md \
         scripts/collect_lustre_topology.py
 git commit -m "chore: add lustre topology skills"
@@ -50,6 +51,7 @@ or jump straight to planning (topology runs automatically if needed):
 ## Files installed
 
 ```
+.claude/commands/lustre_background.md     # shared Lustre background knowledge
 .claude/commands/topology.md              # /topology skill
 .claude/commands/plan_lustre_test.md      # /plan_lustre_test skill
 scripts/collect_lustre_topology.py        # topology collector (requires Vagrant)

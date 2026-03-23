@@ -6,6 +6,7 @@
 #   ./install.sh /path/to/project # installs into specified project root
 #
 # What gets installed:
+#   .claude/commands/lustre_background.md
 #   .claude/commands/topology.md
 #   .claude/commands/plan_lustre_test.md
 #   scripts/collect_lustre_topology.py
@@ -41,18 +42,20 @@ install_file() {
   cp "$src" "$dst"
 }
 
+install_file "$BUNDLE_DIR/skills/lustre_background.md"  "$TARGET/.claude/commands/lustre_background.md"
 install_file "$BUNDLE_DIR/skills/topology.md"          "$TARGET/.claude/commands/topology.md"
 install_file "$BUNDLE_DIR/skills/plan_lustre_test.md"  "$TARGET/.claude/commands/plan_lustre_test.md"
 install_file "$BUNDLE_DIR/scripts/collect_lustre_topology.py" "$TARGET/scripts/collect_lustre_topology.py"
 
 echo ""
-echo "Done. Installed 3 files."
+echo "Done. Installed 4 files."
 echo ""
 echo "Skills available in Claude Code:"
 echo "  /topology          — collect Lustre topology from Vagrant VMs"
 echo "  /plan_lustre_test  — plan a Lustre performance test (calls /topology if needed)"
 echo ""
 echo "Commit the installed files to your project:"
-echo "  git -C \"$TARGET\" add .claude/commands/topology.md \\"
+echo "  git -C \"$TARGET\" add .claude/commands/lustre_background.md \\"
+echo "                       .claude/commands/topology.md \\"
 echo "                       .claude/commands/plan_lustre_test.md \\"
 echo "                       scripts/collect_lustre_topology.py"
